@@ -1,0 +1,15 @@
+{
+  "name": "mettle",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "gulp-autoprefixer": "2.3.1",
+    "gulp-concat": "2.6.0",
+    "gulp-cssnano": "2.1.0",
+    "gulp-imagemin": "2.4.0",
+    "gulp-sass": "2.0.4",
+    "gulp-sourcemaps": "1.5.2",
+    "gulp-uglify": "1.5.1",
+    "main-bower-files": "2.9.0"
+  }
+}

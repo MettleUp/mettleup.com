@@ -1,0 +1,13 @@
+@import '_variables';
+
+.footer {
+	background: $light-grey;
+	color: $dark-grey;
+	letter-spacing: 0.1em;
+	padding: 20px 0;
+	text-transform: uppercase;
+
+	a {
+		color: $black;
+	}
+}

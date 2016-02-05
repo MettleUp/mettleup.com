@@ -1,0 +1,29 @@
+{
+  "name": "mettle",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "animate.css": "3.5.0",
+    "bootstrap": "3.3.6",
+    "font-awesome": "4.5.0",
+    "jquery": "2.2.0",
+    "owl.carousel": "2.0.0-beta.3"
+  },
+  "overrides": {
+    "animate.css": {
+      "ignore": true
+    },
+    "bootstrap": {
+      "main": "dist/js/bootstrap.min.js"
+    },
+    "font-awesome": {
+      "ignore": true
+    },
+    "jquery": {
+      "main": "dist/jquery.min.js"
+    },
+    "owl.carousel": {
+      "main": "dist/owl.carousel.min.js"
+    }
+  }
+}
