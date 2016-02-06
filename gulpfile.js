@@ -33,6 +33,9 @@ gulp.task('images', function() {
 	gulp.src(files)
 		.pipe(imagemin({ progressive: true }))
 		.pipe(gulp.dest('dist/images'));
+
+	gulp.src('src/images/*.svg')
+		.pipe(gulp.dest('dist/images'));
 });
 
 // concatenate and minify .scss files

@@ -21,19 +21,6 @@ hr {
 	}
 }
 
-.home {
-	position: relative;
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 100%;
-    z-index: 10;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
 .caption {
 	position: relative;
 	height: 100%;
@@ -62,14 +49,38 @@ hr {
 	}
 }
 
-.portfolio {
-	width: 100%;
-	background: gainsboro;
-}
-
 .clients {
 	min-height: 200px;
 	padding: 30px 0;
+}
+
+.footer {
+	img {
+		margin-top: -3px;
+		max-height: 14px;
+	}
+
+	.copyright {
+		padding-bottom: 5px;
+	}
+}
+
+.home {
+	position: relative;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    z-index: 10;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.portfolio {
+	width: 100%;
+	background: gainsboro;
 }
 
 .testimonials {
