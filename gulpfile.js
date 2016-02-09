@@ -73,7 +73,8 @@ gulp.task('vendor', function() {
 		.pipe(gulp.dest('dist/css'));
 
 	return gulp.src('bower_components/font-awesome/fonts/*')
-		.pipe(gulp.dest('dist/fonts'));
+		.pipe(gulp.dest('dist/fonts'))
+		.pipe(connect.reload());
 });
 
 // add all html into 'dist'
