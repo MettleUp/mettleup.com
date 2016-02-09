@@ -21,7 +21,8 @@ gulp.task('scripts', function() {
 	return gulp.src(files)
 		.pipe(concat('app.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('dist/js'));
+		.pipe(gulp.dest('dist/js'))
+		.pipe(connect.reload());
 });
 
 // move images to 'dist'
@@ -35,8 +36,9 @@ gulp.task('images', function() {
 		.pipe(imagemin({ progressive: true }))
 		.pipe(gulp.dest('dist/images'));
 
-	gulp.src('src/images/*.svg')
-		.pipe(gulp.dest('dist/images'));
+	return gulp.src('src/images/*.svg')
+		.pipe(gulp.dest('dist/images'))
+		.pipe(connect.reload());
 });
 
 // concatenate and minify .scss files
@@ -48,7 +50,8 @@ gulp.task('styles', function() {
 		.pipe(concat('styles.css'))
 		.pipe(minifyCss())
     	.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('dist/css'));
+		.pipe(gulp.dest('dist/css'))
+		.pipe(connect.reload());
 });
 
 // concatenate all vendor files into 'dist'
@@ -69,28 +72,28 @@ gulp.task('vendor', function() {
 		.pipe(concat('vendor.css'))
 		.pipe(gulp.dest('dist/css'));
 
-	gulp.src('bower_components/font-awesome/fonts/*')
+	return gulp.src('bower_components/font-awesome/fonts/*')
 		.pipe(gulp.dest('dist/fonts'));
 });
 
 // add all html into 'dist'
 gulp.task('views', function() {
-	gulp.src('src/index.html')
-		.pipe(gulp.dest('dist'));
+	return gulp.src('src/index.html')
+		.pipe(gulp.dest('dist'))
+		.pipe(connect.reload());
 });
 
 gulp.task('serve', function() {
-	connect.server({
-		livereload: true
+	return connect.server({
+		livereload: true,
+		root: 'dist'
 	});
 });
 
 // watch for file changes
 gulp.task('watch', function() {
 	// recommend not watching images, minification is sluggish
-	gulp.watch(['src/*.js', 'src/**/*.js', 'src/index.html', 'src/**/*.html', 'src/styles/**/*.scss', 'src/styles/*.scss'], [
-		'scripts',
-		'styles',
-		'views'
-	]);
+	gulp.watch(['src/*.js', 'src/**/*.js'], ['scripts']);
+	gulp.watch(['src/index.html', 'src/**/*.html'], ['views']);
+	gulp.watch(['src/styles/**/*.scss', 'src/styles/*.scss'], ['styles']);
 });
