@@ -3,6 +3,7 @@
 // grab our packages
 var autoprefixer = require('gulp-autoprefixer'),
 	concat = require('gulp-concat'),
+	connect = require('gulp-connect'),
 	gulp   = require('gulp'),
 	imagemin = require('gulp-imagemin'),
     mainBowerFiles = require('main-bower-files'),
@@ -76,9 +77,12 @@ gulp.task('vendor', function() {
 gulp.task('views', function() {
 	gulp.src('src/index.html')
 		.pipe(gulp.dest('dist'));
+});
 
-	// gulp.src('src/**/*.html')
-	// 	.pipe(gulp.dest('dist/views'));
+gulp.task('serve', function() {
+	connect.server({
+		livereload: true
+	});
 });
 
 // watch for file changes
