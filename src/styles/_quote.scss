@@ -1,0 +1,51 @@
+@import '_variables';
+
+.quote {
+	blockquote {
+		border: 0;
+		font-size: 20px;
+		font-weight: 300;
+		quotes: none;
+
+		cite {
+			img {
+				border: 5px solid $middle-grey;
+				border-radius: 180px;
+				max-height: 190px;
+			}
+
+			span {
+				display: block;
+			}
+
+			.name {
+				font-size: 30px;
+				font-weight: 500;
+				padding-top: 10px;
+				text-align: right;
+			}
+
+			.title {
+				font-size: 18px;
+				font-weight: 100;
+				margin-top: -14px;
+				margin-right: -4px;
+				padding-bottom: 10px;
+				text-align: right;
+			}
+		}
+
+		p {
+			padding: 40px 0;
+
+			&:before {
+				background-image: url('/images/bg-quote-open.png');
+				background: $black;
+				content: "";
+				left: -107px;
+				top: -15px;
+				width: 87px;
+			}
+		}
+	}
+}
