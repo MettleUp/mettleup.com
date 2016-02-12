@@ -40,7 +40,6 @@
 		}
 
 		.quotations {
-
 			&:after, &:before {
 				background: center no-repeat;
 				content: "";
@@ -59,7 +58,8 @@
 			&:before {
 				background-image: url('/images/bg-quote-open.png');
 				left: -75px;
-				top: 5px;			}
+				top: 5px;
+			}
 		}
 	}
 }
