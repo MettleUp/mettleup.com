@@ -37,15 +37,29 @@
 
 		p {
 			padding: 40px 0;
+		}
+
+		.quotations {
+
+			&:after, &:before {
+				background: center no-repeat;
+				content: "";
+				display: block;
+				height: 76px;
+				position: absolute;
+				width: 87px;
+			}
+
+			&:after {
+				background-image: url('/images/bg-quote-close.png');
+				bottom: -5px;
+				right: -75px;
+			}
 
 			&:before {
 				background-image: url('/images/bg-quote-open.png');
-				background: $black;
-				content: "";
-				left: -107px;
-				top: -15px;
-				width: 87px;
-			}
+				left: -75px;
+				top: 5px;			}
 		}
 	}
 }
