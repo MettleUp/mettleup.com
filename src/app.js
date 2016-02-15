@@ -25,6 +25,9 @@
 				},
 				1000: {
 					items: 5
+				},
+				2000: {
+					items: 7
 				}
 			},
 			stagePadding: 30

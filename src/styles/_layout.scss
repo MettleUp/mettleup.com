@@ -110,8 +110,67 @@ hr {
 }
 
 .testimonials {
+	background: $light-grey;
 	min-height: 300px;
-	padding: 30px 0;
+	padding: 60px 0;
+
+	.intro {
+		p {
+			color: $dark-grey;
+			font-size: 40px;
+			font-weight: 300;
+
+			&:first-child {
+				color: $darker-grey;
+				font-weight: 400;
+			}
+
+			strong {
+				color: $black;
+			}
+		}
+	}
+
+	.case {
+		padding-top: 50px;
+
+		div {
+			background: $white;
+		}
+
+		.header {
+			border-bottom: 1px solid $light-grey;
+			padding: 15px;
+
+			cite {
+				img {
+					display: inline-block;
+					height: $testimonial-image-height;
+				}
+
+				div {
+					display: inline-block;
+					height: $testimonial-image-height;
+					padding-top: 0;
+					position: relative;
+
+					span {
+						text-align: left;
+					}
+
+					.name {
+						padding-top: 38px;
+					}
+				}
+			}
+		}
+
+		.quote {
+			padding: 15px;
+		}
+
+			
+	}
 }
 
 .contact {
