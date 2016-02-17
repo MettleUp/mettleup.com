@@ -63,3 +63,15 @@ cite {
 		text-align: right;
 	}
 }
+
+@media (max-width: 768px) {
+    .quote {
+    	blockquote {
+    		.quotations {
+    			&:after {
+    				display: none;
+    			}
+    		}
+    	}
+    }
+}
