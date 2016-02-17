@@ -28,51 +28,62 @@
 
 .portfolio {
 	.owl-carousel {
+		height: 100%;
 
-		.owl-background {
-		    background-repeat: no-repeat;
-		    background-position: center center;
-		    -webkit-background-size: cover;
-		    -moz-background-size: cover;
-		    -o-background-size: cover;
-		    background-size: cover;
+		.owl-stage-outer {
+			height: 100%;
 
-		    .project {
-    		    color: $white;
-    		    text-align: center;
+			.owl-stage {
+				height: 100%;
 
-    		    .logo {
-                    margin-left: auto;
-                    margin-right: auto;
-                    display: inline-block
-                }
+				.owl-item {
+					height: 100%;
 
-                .desc, .tech {
-                    padding-top: 20px;
-                    text-align: left;
-                    text-shadow: 0px 0px 5px #000000;
+					hr {
+						margin: 20px auto 20px auto;
+					}
 
-                    strong {
-                        color: $white;
-                        font-weight: 800;
-                    }
-                }
+					.owl-background {
+					    background-repeat: no-repeat;
+					    background-position: center center;
+					    -webkit-background-size: cover;
+					    -moz-background-size: cover;
+					    -o-background-size: cover;
+					    background-size: cover;
+					    height: 100%;
 
-    		    img {
-        		    width: 200px;
-    		    }
-		    }
-		}
+					    .owl-row {
+							margin-top: 60px;
+			        		padding: 0 30px;
+						}
 
-		.owl-item {
+					    .project {
+			    		    color: $white;
+			    		    text-align: center;
 
-			hr {
-				margin: 20px auto 20px auto;
-			}
+			    		    .logo {
+			                    margin-left: auto;
+			                    margin-right: auto;
+			                    display: inline-block
+			                }
 
-			.owl-row {
-				margin-top: 60px;
-        		padding: 0 30px;
+			                .desc, .tech {
+			                    padding-top: 20px;
+			                    text-align: left;
+			                    text-shadow: 0px 0px 5px #000000;
+
+			                    strong {
+			                        color: $white;
+			                        font-weight: 800;
+			                    }
+			                }
+
+			    		    img {
+			        		    width: 200px;
+			    		    }
+					    }
+					}
+				}
 			}
 		}
 
