@@ -1,0 +1,12 @@
+@import '_variables';
+
+.reserve {
+	background: $dark-grey;
+	color: $white;
+	padding: 45px 0;
+
+	p {
+		font-size: 40px;
+		font-weight: 300;
+	}
+}

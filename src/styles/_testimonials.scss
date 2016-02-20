@@ -1,0 +1,84 @@
+@import '_variables';
+
+.testimonials {
+	background: $light-grey;
+	min-height: 300px;
+	padding: 60px 0;
+
+	.intro {
+		p {
+			color: $dark-grey;
+			font-size: 40px;
+			font-weight: 300;
+
+			&:first-child {
+				color: $darker-grey;
+				font-weight: 400;
+			}
+
+			strong {
+				color: $black;
+			}
+		}
+	}
+
+	.case {
+		padding-top: 50px;
+
+		div {
+			background: $white;
+		}
+
+		.header {
+			border-bottom: 1px solid $light-grey;
+			padding: 15px;
+
+			cite {
+				img {
+					display: inline-block;
+					height: $testimonial-image-height;
+				}
+
+				div {
+					display: inline-block;
+					height: $testimonial-image-height;
+					padding-top: 0;
+					position: relative;
+
+					span {
+						text-align: left;
+					}
+
+					.name {
+						padding-top: 38px;
+					}
+				}
+			}
+		}
+
+		.quote {
+			padding: 30px 15px;
+
+			blockquote {
+				.quotations {
+					&:after {
+						bottom: -15px;
+						right: 5px;
+					}
+
+					&:before {
+						left: 5px;
+						top: -15px;
+					}
+
+					p {
+						line-height: 1.7em;
+						font-size: 20px;
+						font-weight: 300;
+						padding: 0 47px;
+					}
+				}
+			}
+		}
+	}
+}
