@@ -5,9 +5,17 @@
 	padding: 60px 0;
 
 	.quote {
-		cite {
-			img, span {
-				
+		blockquote {
+			cite {
+				.name {
+					width: 105%;
+				}
+			}
+
+			.quotations {
+				&:after {
+					right: -55px;
+				}
 			}
 		}
 	}
