@@ -48,20 +48,30 @@ cite {
 	}
 
 	.name {
-		font-size: 30px;
+		font-size: 2.14em;
 		font-weight: 500;
 		padding-top: 10px;
 		text-align: right;
         line-height: 1.6em;
+        white-space: nowrap;
+        @media all and (max-width: 992px) and (min-width:769px)  {
+            font-size: 1.3em;
+            line-height: 2.4em
+        }
+
 	}
 
 	.title {
-		font-size: 18px;
+		font-size: 1.3em;
 		font-weight: 100;
 		margin-top: -14px;
 		margin-right: -4px;
 		padding-bottom: 10px;
 		text-align: right;
+        white-space: nowrap;
+        @media all and (max-width: 992px) and (min-width:769px)  {
+            font-size: 0.7em;
+        }
 	}
 }
 
