@@ -58,26 +58,34 @@
         $('#owl-clients').owlCarousel(client);
         $('#owl-portfolio').owlCarousel(portfolio);
 
-        $('form#reserve').on('submit', function() {
-            rForm = $(this);
-            $.ajax({
-                url: "//formspree.io/andy@mettleup.com",
-                method: "POST",
-                data: $(rForm).serialize(),
-                dataType: "json",
-                success: function(data, status, o) {
-                    if (data.success == "email sent") {
-                        $(rForm).parents('.featherlight-inner').html('Wonderful! Thank you for reaching out, we will get in contact with you very soon.');
-                    } else {
-                        $(rForm).parents('.featherlight-inner').html("Well that's odd. The email server that handles delivery between the web site and our inbox may not have been reached. We would hate to miss out on the chance to talk, so please do feel free to contact us directly at <a href='mailto:info@mettleup.com'>info@mettleup.com</a> and let us know what you're looking for!");
-                    }
-                },
-                error: function(o, status, e) {
-                        $(rForm).parents('.featherlight-inner').html("Well that's odd. The email server that handles delivery between the web site and our inbox may not have been reached. We would hate to miss out on the chance to talk, so please do feel free to contact us directly at <a href='mailto:info@mettleup.com'>info@mettleup.com</a> and let us know what you're looking for!");
-                }
-            });
+        $('.form_reserve').on('click', function() {
+            $.featherlight('#form_reserve', {
+               afterOpen: function(e) {
+                    $('.featherlight-inner form').validator().on('submit', function(e) {
+                        if (!e.isDefaultPrevented()) {
+                            rForm = $(this);
+                            $.ajax({
+                                url: "//formspree.io/andy@mettleup.com",
+                                method: "POST",
+                                data: $(rForm).serialize(),
+                                dataType: "json",
+                                success: function(data, status, o) {
+                                    if (data.success == "email sent") {
+                                        $(rForm).parents('.featherlight-inner').html('<p>Wonderful! Thank you for reaching out, we will get in contact with you very soon.</p><img src="http://i.giphy.com/10bHcDcPM925ry.gif" alt="" />');
+                                    } else {
+                                        $(rForm).parents('.featherlight-inner').html("Well that's odd. The email server that handles delivery between the web site and our inbox may not have been reached. We would hate to miss out on the chance to talk, so please do feel free to contact us directly at <a href='mailto:info@mettleup.com'>info@mettleup.com</a> and let us know what you're looking for!");
+                                    }
+                                },
+                                error: function(o, status, e) {
+                                        $(rForm).parents('.featherlight-inner').html("Well that's odd. The email server that handles delivery between the web site and our inbox may not have been reached. We would hate to miss out on the chance to talk, so please do feel free to contact us directly at <a href='mailto:info@mettleup.com'>info@mettleup.com</a> and let us know what you're looking for!");
+                                }
+                            });
+                        }
 
-            return false;
+                        return false;
+                    });
+               }
+           });
         });
     }
 
