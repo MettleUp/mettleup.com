@@ -8,7 +8,6 @@
     "font-awesome": "4.5.0",
     "jquery": "2.2.0",
     "owl.carousel": "2.0.0-beta.3",
-    "featherlight": "^1.3.5",
     "bootstrap-validator": "^0.9.0"
   },
   "overrides": {
@@ -20,9 +19,6 @@
     },
     "bootstrap-validator": {
       "main": "dist/validator.min.js"
-    },
-    "featherlight": {
-      "main": "release/featherlight.min.js"
     },
     "font-awesome": {
       "ignore": true
