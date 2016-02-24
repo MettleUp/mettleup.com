@@ -77,7 +77,8 @@ gulp.task('vendor', function() {
         'bower_components/bootstrap/dist/css/bootstrap.min.css',
         'bower_components/font-awesome/css/font-awesome.min.css',
         'bower_components/owl.carousel/dist/assets/owl.carousel.min.css',
-        'bower_components/owl.carousel/dist/assets/owl.theme.default.min.css'
+        'bower_components/owl.carousel/dist/assets/owl.theme.default.min.css',
+        'bower_components/featherlight/release/featherlight.min.css'
     ];
 
     gulp.src(vendors)
