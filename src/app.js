@@ -59,6 +59,7 @@
         $('#owl-portfolio').owlCarousel(portfolio);
 
         $('#form_reserve').on('shown.bs.modal', function () {
+            ga('send', 'event', 'contact', 'opened');
             $('#form_reserve form').validator().on('submit', function(e) {
                 if (!e.isDefaultPrevented()) {
                     rForm = $(this);
@@ -78,6 +79,7 @@
                                 $(rForm).parents('.modal-body').html("Well that's odd. The email server that handles delivery between the web site and our inbox may not have been reached. We would hate to miss out on the chance to talk, so please do feel free to contact us directly at <a href='mailto:info@mettleup.com'>info@mettleup.com</a> and let us know what you're looking for!");
                         }
                     });
+                    ga('send', 'event', 'contact', 'sent');
                 }
 
                 return false;
