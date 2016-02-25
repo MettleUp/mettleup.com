@@ -5,6 +5,7 @@ var autoprefixer = require('gulp-autoprefixer'),
     concat = require('gulp-concat'),
     connect = require('gulp-connect'),
     gulp   = require('gulp'),
+    htmlmin = require('gulp-htmlmin'),
     image = require('gulp-image'),
     imagemin = require('gulp-imagemin'),
     mainBowerFiles = require('main-bower-files'),
@@ -93,6 +94,7 @@ gulp.task('vendor', function() {
 // add all html into 'dist'
 gulp.task('views', function() {
     return gulp.src('src/index.html')
+        .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest('dist'))
         .pipe(connect.reload());
 });
