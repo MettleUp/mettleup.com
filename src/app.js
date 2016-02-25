@@ -70,13 +70,13 @@
                         dataType: "json",
                         success: function(data, status, o) {
                             if (data.success == "email sent") {
-                                $(rForm).parents('.modal-body').html('<p>Thank you for reaching out, we will get in contact with you very soon.</p><img src="http://i.giphy.com/10bHcDcPM925ry.gif" alt="" />').siblings('.modal-header').find('.modal-title').html('Wonderful!');
+                                $(rForm).parents('.modal-body').html($('#response-thankyou').html()).siblings('.modal-header').find('.modal-title').html('Wonderful!');
                             } else {
-                                $(rForm).parents('.modal-body').html("Well that's odd. The email server that handles delivery between the web site and our inbox may not have been reached. We would hate to miss out on the chance to talk, so please do feel free to contact us directly at <a href='mailto:info@mettleup.com'>info@mettleup.com</a> and let us know what you're looking for!");
+                                $(rForm).parents('.modal-body').html($('#response-problem').html());
                             }
                         },
                         error: function(o, status, e) {
-                                $(rForm).parents('.modal-body').html("Well that's odd. The email server that handles delivery between the web site and our inbox may not have been reached. We would hate to miss out on the chance to talk, so please do feel free to contact us directly at <a href='mailto:info@mettleup.com'>info@mettleup.com</a> and let us know what you're looking for!");
+                                $(rForm).parents('.modal-body').html($('#response-problem').html());
                         }
                     });
                     ga('send', 'event', 'contact', 'sent');
