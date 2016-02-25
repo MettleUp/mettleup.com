@@ -336,6 +336,7 @@
                     <div class="modal-body">
                         <form id="reserve" action="" method="post" novalidate="false">
                             <input type="hidden" name="_next" value="//mettleup.com" />
+                            <input type="hidden" name="_subject" value="Getting started with Mettle" />
                             <div class="form-group">
                                 <label for="Name" class="control-label">What's your name?</label>
                                 <input id="Name" type="text" name="name" class="form-control" data-error="Please, we'd love to know what to call you" required />
@@ -380,6 +381,11 @@
                                     <option>Near-term - We're ready but not rushed. Looking to start in a month or two</option>
                                     <option>Planning ahead - We're testing the waters but likely won't start for 3 months or more</option>
                                 </select>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group hidden">
+                                <label for="Gotcha" class="control-label">Gotcha</label>
+                                <input id="Gotcha" type="gotcha" name="_gotcha" class="form-control" data-error="Please leave this field blank" />
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
