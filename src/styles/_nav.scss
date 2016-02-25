@@ -20,21 +20,29 @@
 
     li {
         a {
-            border: 1px solid $black;
-            color: $black;
             margin: 10px 5px;
             padding: 5px 10px;
 
             &:hover {
-                background: $black;
-                color: $white;
+                color: $black;
+                background: transparent;
+                font-weight: bold;
+            }
+
+            &.btn:hover {
+                color: $black;
+                background: $white;
+            }
+
+            &.btn {
+                border: 1px solid $black;
+                color: $black;
             }
         }
     }
 
     .navbar-brand {
         color: $black;
-
     	-webkit-transition: $nav-transition;
 	    -moz-transition: $nav-transition;
 	    -ms-transition: $nav-transition;
@@ -47,12 +55,20 @@
     box-shadow: none;
 	li {
 		a {
-            border: 1px solid $white;
-			color: $white;
+    		border: none;
 
-            &:hover {
+            &:hover, &.btn:hover {
+                background: transparent;
+                font-weight: bold;
+            }
+
+            &.btn:hover {
                 background: $white;
-                color: $black !important;
+            }
+
+            &.btn {
+                border: 1px solid $white;
+    			color: $white;
             }
 		}
 	}
