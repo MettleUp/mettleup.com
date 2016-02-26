@@ -335,27 +335,27 @@
                             <input type="hidden" name="_next" value="//mettleup.com" />
                             <input type="hidden" name="_subject" value="Getting started with Mettle" />
                             <div class="form-group col-sm-12">
-                                <input id="name" type="text" data-error="Wait, what should we call you?" required />
+                                <input id="name" name="Name" type="text" data-error="Wait, what should we call you?" required />
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>What's your name?</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-sm-12">
-                                <input id="email" type="email" data-error="Please include a valid email address" required />
+                                <input id="email" name="Email" type="email" data-error="Please include a valid email address" required />
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Email address <div class="help-block with-errors"></div></label>
                             </div>
                             <div class="form-group col-sm-12">
-                                <textarea id="project" rows="3" required></textarea>
+                                <textarea id="project" name="Project" rows="3" required></textarea>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Please briefly describe the project you're working on</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="select col-sm-12">
-                                <select id="projectstatus" data-error="Please let us know how far this project has been taken">
+                                <select id="projectstatus" name="Status" data-error="Please let us know how far this project has been taken">
                                     <option value=""></option>
                                     <option>Concept - I've got a great idea and I'm ready to start!</option>
                                     <option>Architected - I've already put some solid time into wireframes and storyboard, just need a team to build it</option>
@@ -366,7 +366,7 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="select col-sm-12">
-                                <select id="budget" data-error="How much are you prepared to put into this project?">
+                                <select id="budget" name="Budget" data-error="How much are you prepared to put into this project?">
                                     <option value=""></option>
                                     <option>$5-10,000 - Small web application or feature additions</option>
                                     <option>$10-15,000 - Medium sized web or mobile application</option>
@@ -376,7 +376,7 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="select col-sm-12">
-                                <select id="timeline" data-error="How soon should we start?">
+                                <select id="timeline" name="Timeline" data-error="How soon should we start?">
                                     <option value=""></option>
                                     <option>Immediately - We have some mission critical tasks that need attention now!</option>
                                     <option>Shortly - We're ready to move in the next week or two</option>
