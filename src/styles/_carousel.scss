@@ -70,12 +70,14 @@
 
 			                .desc, .tech {
 			                    padding-top: 20px;
+			                    font-size: 20px;
+			                    font-weight: 300;
 			                    text-align: left;
-			                    text-shadow: 0px 0px 5px #000000;
+			                    text-shadow: 0px 0px 5px $black;
 
 			                    strong {
 			                        color: $white;
-			                        font-weight: 800;
+			                        font-weight: 500;
 			                    }
 			                }
 
