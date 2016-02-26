@@ -34,6 +34,21 @@
 	  opacity: 0.5;
 	}
 
+	.form-group {
+	    .help-block {
+        	height: 0;
+        	margin-top: 0;
+        	margin-bottom: 0;
+        }
+
+        &.has-error label .help-block {
+            display:inline-block;
+            padding-left: 20px;
+            text-transform: lowercase;
+            font-size: 0.8em;
+        }
+	}
+
 	input {
 	  padding: 10px 10px 10px 5px;
 	  display: block;
@@ -105,6 +120,12 @@
 	  color: $white;
 	}
 
+	.has-error label, .has-error label, .has-error label {
+	  top: -10px;
+	  font-size: 12px;
+	  color: $white;
+	}
+
 	.select {
 	  position: relative;
 
@@ -120,7 +141,7 @@
 	    border: none;
 	    border-bottom: 1px solid $white;
 	    border-radius: 0;
-	    -webkit-appearance: none;   
+	    -webkit-appearance: none;
 
 	    &:focus {
 	      outline: 0;

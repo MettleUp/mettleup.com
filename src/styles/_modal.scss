@@ -37,6 +37,10 @@
 .modal-body {
 	background: $black;
 
+	p {
+    	color: $white;
+	}
+
 	.btn-transparent {
 		color: $white;
 		margin-top: 45px;
@@ -45,6 +49,17 @@
 			color: $light-grey;
 		}
 	}
+
+	.fa-stack .fa-circle {
+    	color: $white;
+
+    	& + .fa {
+        	color: $black;
+    	}
+	}
+
+
+
 }
 
 .modal-backdrop {
