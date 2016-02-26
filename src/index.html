@@ -156,7 +156,7 @@
                                 <div class="col-sm-12">
                                     <blockquote>
                                         <div class="quotations">
-                                            <p class="text-center">Mettle dove headfirst into each task and provided simple, practical solutions without over-engineering.  Excellent communicators!</p>
+                                            <p class="text-center">Mettle dives headfirst into each task and provides simple, practical solutions without over-engineering.  Excellent communicators!</p>
                                         </div>
                                     </blockquote>
                                 </div>
@@ -335,62 +335,61 @@
                         <h4 class="modal-title" id="myModalLabel">Let's talk!</h4>
                     </div>
                     <div class="modal-body">
-                        <form class="account polymer">
-                            <div class="form-group col-sm-6 col-xs-12">
-                                <input type="text" required>
-                                <span class="highlight"></span>
-                                <span class="bar"></span>
-                                <label>First Name</label>
-                            </div>
-                        </form>
-                        <form id="reserve" action="" method="post" novalidate="false">
+                        <form id="reserve" class="account polymer" action="" method="post" novalidate="false">
                             <input type="hidden" name="_next" value="//mettleup.com" />
                             <input type="hidden" name="_subject" value="Getting started with Mettle" />
-                            <div class="form-group">
-                                <label for="Name" class="control-label">What's your name?</label>
-                                <input id="Name" type="text" name="name" class="form-control" data-error="Please, we'd love to know what to call you" required />
-                                <div class="help-block with-errors"></div>
+                            <div class="form-group col-sm-12">
+                                <input id="name" type="text" data-error="Please, we'd love to know what to call you" required />
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>What's your name?</label>
+                                <!--div class="help-block with-errors"></div-->
                             </div>
-                            <div class="form-group">
-                                <label for="Email" class="control-label">Email address</label>
-                                <input id="Email" type="email" name="email" class="form-control" data-error="Please include a valid email address" required />
-                                <div class="help-block with-errors"></div>
+                            <div class="form-group col-sm-12">
+                                <input id="email" type="email" data-error="Please include a valid email address" required />
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>Email address</label>
+                                <!--div class="help-block with-errors"></div-->
                             </div>
-                            <div class="form-group">
-                                <label for="Project">Can you please briefly describe the project you're working on?</label>
-                                <textarea id="Project" class="form-control" name="project" rows="3"></textarea>
+                            <div class="form-group col-sm-12">
+                                <textarea id="project" rows="3" required></textarea>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>Please briefly describe the project you're working on</label>
+                                <!--div class="help-block with-errors"></div-->
                             </div>
-                            <div class="form-group">
-                                <label for="ProjectStatus" class="control-label">What's the status of this project?</label>
-                                <select id="ProjectStatus" name="project_status" class="form-control" data-error="Please let us know how far this project has been taken">
+                            <div class="select col-sm-12">
+                                <select id="projectstatus" data-error="Please let us know how far this project has been taken" required>
                                     <option value=""></option>
                                     <option>Concept - I've got a great idea and I'm ready to start!</option>
                                     <option>Architected - I've already put some solid time into wireframes and storyboard, just need a team to build it</option>
                                     <option>Some development - We started putting it together but need a hand to get to the finish line</option>
                                     <option>Active product - We're live, but need some assistance in adding features or fixing some bugs.</option>
                                 </select>
-                                <div class="help-block with-errors"></div>
+                                <label>What's the status of this project?</label>
+                                <!--div class="help-block with-errors"></div-->
                             </div>
-                            <div class="form-group">
-                                <label for="Budget" class="control-label">What is your budget?</label>
-                                <select id="Budget" name="budget" class="form-control" data-error="How much are you prepared to put into this project?">
+                            <div class="select col-sm-12">
+                                <select id="budget" data-error="How much are you prepared to put into this project?" required>
                                     <option value=""></option>
                                     <option>$5-10,000 - Small web application or feature additions</option>
                                     <option>$10-15,000 - Medium sized web or mobile application</option>
                                     <option>$15,000+ - Full-featured, multi-user web application</option>
                                 </select>
-                                <div class="help-block with-errors"></div>
+                                <label>What is your budget?</label>
+                                <!--div class="help-block with-errors"></div-->
                             </div>
-                            <div class="form-group">
-                                <label for="Timeline" class="control-label">Finally, when would you like to get started?</label>
-                                <select id="Timeline" name="timeline" class="form-control" data-error="How soon should we start?">
+                            <div class="select col-sm-12">
+                                <select id="timeline" data-error="How soon should we start?" required>
                                     <option value=""></option>
                                     <option>Immediately - We have some mission critical tasks that need attention now!</option>
                                     <option>Shortly - We're ready to move in the next week or two</option>
                                     <option>Near-term - We're ready but not rushed. Looking to start in a month or two</option>
                                     <option>Planning ahead - We're testing the waters but likely won't start for 3 months or more</option>
                                 </select>
-                                <div class="help-block with-errors"></div>
+                                <label>Finally, when would you like to get started?</label>
+                                <!--div class="help-block with-errors"></div-->
                             </div>
                             <div class="form-group hidden">
                                 <label for="Gotcha" class="control-label">Gotcha</label>
