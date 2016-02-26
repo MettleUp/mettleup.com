@@ -4,6 +4,10 @@
     display: none;
 }
 
+.modal-body {
+	background: $black;
+}
+
 .polymer {
 	.bar {
 	  position: relative;
@@ -43,7 +47,7 @@
 	  display: block;
 	  width: 100%;
 	  border: none;
-	  border-bottom: 2px solid $white;
+	  border-bottom: 1px solid $white;
 	  background-color: transparent;
 	  color: $white;
 
@@ -54,22 +58,44 @@
 	  }
 	}
 
+	textarea {
+		padding: 10px 10px 10px 5px;
+		display: block;
+		width: 100%;
+		border: none;
+		border-bottom: 1px solid $white;
+		background-color: transparent;
+		color: $white;
+		resize: none;
+
+		&:focus,
+		&:valid {
+			border-bottom: 1px solid $white;
+		}
+		&:focus {
+			outline: none;
+			transition: 1.2s ease all;
+		}
+	}
+
 	label {
 	  color: $white;
-	  font-weight: normal;
+	  font-weight: 300;
 	  position: absolute;
 	  pointer-events: none;
-	  left: 5px;
+	  left: 15px;
 	  padding-left: 5px;
 	  top: 10px;
 	  transition: 0.2s ease all;
 	}
 
-	input:focus ~ .bar:before, input:focus ~ .bar:after {
+	input:focus ~ .bar:before, input:focus ~ .bar:after,
+	textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
 	  width: 50%;
 	}
 
-	input:focus ~ .highlight {
+	input:focus ~ .highlight,
+	textarea:focus ~ .highlight {
 	  animation: inputHighlighter 0.3s ease;
 	}
 
@@ -78,7 +104,8 @@
 	  to {width:0; background: transparent;}
 	}
 
-	input:focus ~ label, input:valid ~ label {
+	input:focus ~ label, input:valid ~ label,
+	textarea:focus ~ label, textarea:valid ~ label {
 	  top: -10px;
 	  font-size: 12px;
 	  color: $white;
@@ -87,17 +114,17 @@
 	.select {
 	  position: relative;
 
-	  > select {
+	  select {
 	    margin-bottom: 10px;
 	    padding: 10px 0 10px 0;
 	    width: 100%;
 	    position: relative;
-	    background-color: $white;
-	    color: $black;
+	    background-color: transparent;
+	    color: $white;
 	    text-indent: 0.01px;
 	    text-overflow: "";
 	    border: none;
-	    border-bottom: 2px solid $white;
+	    border-bottom: 1px solid $white;
 	    border-radius: 0;
 	    -webkit-appearance: none;   
 
@@ -107,7 +134,7 @@
 	  }
 
 	  label {
-	    left: 10px;
+	    left: 15px;
 
 	    &.valid {
 	      top: -10px;
@@ -120,11 +147,11 @@
 	    z-index: 0;
 	    content: "";
 	    position: absolute;
-	    color: $black;
+	    color: $white;
 	    right: 10px;
 	    top: 50%;
 	    width: 0;
-	    margin-top: -3px;
+	    margin-top: -8px;
 	    margin-right: 15px;
 	    height: 0;
 	    border-top: 6px solid;
