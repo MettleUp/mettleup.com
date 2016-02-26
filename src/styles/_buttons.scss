@@ -46,7 +46,7 @@
 }
 
 .link-button {
-	
+	a {
 		border: solid $white 1px;
 		box-sizing: border-box;
 		color: $white;
@@ -64,5 +64,5 @@
 			background: $light-grey;
 			color: $dark-grey;
 		}
-	
+	}
 }
