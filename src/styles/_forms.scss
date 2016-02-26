@@ -3,3 +3,133 @@
 .modalForm {
     display: none;
 }
+
+.polymer {
+	.bar {
+	  position: relative;
+	  display: block;
+	  width: auto;
+
+	  &:before,
+	  &:after {
+	    content: '';
+	    height: 2px;
+	    width: 0;
+	    bottom: 1px;
+	    position: absolute;
+	    background: $white;
+	    transition: 0.2s ease all;
+	  }
+	  &:before {
+	    left: 50%;
+	  }
+	  &:after {
+	    right: 50%;
+	  }
+	}
+
+	.highlight {
+	  position: absolute;
+	  height: 60%;
+	  width: 100px;
+	  top: 25%;
+	  left: 0;
+	  pointer-events: none;
+	  opacity: 0.5;
+	}
+
+	input {
+	  padding: 10px 10px 10px 5px;
+	  display: block;
+	  width: 100%;
+	  border: none;
+	  border-bottom: 2px solid $white;
+	  background-color: transparent;
+	  color: $white;
+
+	  &:focus {
+	    outline: none;
+	    border-bottom: 1px solid $white;
+	    transition: 1.2s ease all;
+	  }
+	}
+
+	label {
+	  color: $white;
+	  font-weight: normal;
+	  position: absolute;
+	  pointer-events: none;
+	  left: 5px;
+	  padding-left: 5px;
+	  top: 10px;
+	  transition: 0.2s ease all;
+	}
+
+	input:focus ~ .bar:before, input:focus ~ .bar:after {
+	  width: 50%;
+	}
+
+	input:focus ~ .highlight {
+	  animation: inputHighlighter 0.3s ease;
+	}
+
+	@keyframes inputHighlighter {
+	  from {background: $white;}
+	  to {width:0; background: transparent;}
+	}
+
+	input:focus ~ label, input:valid ~ label {
+	  top: -10px;
+	  font-size: 12px;
+	  color: $white;
+	}
+
+	.select {
+	  position: relative;
+
+	  > select {
+	    margin-bottom: 10px;
+	    padding: 10px 0 10px 0;
+	    width: 100%;
+	    position: relative;
+	    background-color: $white;
+	    color: $black;
+	    text-indent: 0.01px;
+	    text-overflow: "";
+	    border: none;
+	    border-bottom: 2px solid $white;
+	    border-radius: 0;
+	    -webkit-appearance: none;   
+
+	    &:focus {
+	      outline: 0;
+	    }
+	  }
+
+	  label {
+	    left: 10px;
+
+	    &.valid {
+	      top: -10px;
+	      font-size: 12px;
+	      color: $white
+	    }
+	  }
+
+	  &:after {
+	    z-index: 0;
+	    content: "";
+	    position: absolute;
+	    color: $black;
+	    right: 10px;
+	    top: 50%;
+	    width: 0;
+	    margin-top: -3px;
+	    margin-right: 15px;
+	    height: 0;
+	    border-top: 6px solid;
+	    border-right: 6px solid transparent;
+	    border-left: 6px solid transparent;
+	  }
+	}
+}
