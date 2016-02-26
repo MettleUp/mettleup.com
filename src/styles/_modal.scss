@@ -36,6 +36,15 @@
 
 .modal-body {
 	background: $black;
+
+	.btn-transparent {
+		color: $white;
+		margin-top: 45px;
+
+		&.disabled {
+			color: $light-grey;
+		}
+	}
 }
 
 .modal-backdrop {
