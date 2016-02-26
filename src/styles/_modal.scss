@@ -1,2 +1,49 @@
 @import '_variables';
 
+.modalForm {
+    display: none;
+}
+
+.modal-header {
+	background: $black;
+	border-bottom: none;
+	padding: 15px;
+
+	.close {
+		background: 0 0;
+		border: 0;
+		color: $white;
+		cursor: hand;
+		cursor: pointer;
+		font-size: 3em;
+		line-height: 1;
+		opacity: .8;
+		padding: 0;
+		position: fixed;
+		right: calc(0px - (50vw - 350px));
+		text-shadow: 0 1px 0 $white;
+		top: -100px;
+		width: 42px;
+		-webkit-appearance: none;
+	}
+
+	.modal-title {
+		color: $white;
+		font-size: 3em;
+		font-weight: 100;
+	}
+}
+
+.modal-body {
+	background: $black;
+}
+
+.modal-backdrop {
+	&.in {
+		opacity: 1;
+	}
+}
+
+.modal-dialog {
+	margin-top: 120px;
+}
