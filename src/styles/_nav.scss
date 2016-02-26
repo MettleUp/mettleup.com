@@ -20,6 +20,8 @@
 
     li {
         a {
+            border: 1px solid transparent;
+            color: $dark-grey;
             margin: 10px 5px;
             padding: 5px 10px;
 
@@ -31,6 +33,7 @@
             &.btn:hover {
                 color: $white;
                 background: $black;
+                font-weight: 400;
             }
 
             &.btn {
