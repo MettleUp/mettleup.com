@@ -26,12 +26,11 @@
             &:hover {
                 color: $black;
                 background: transparent;
-                font-weight: bold;
             }
 
             &.btn:hover {
-                color: $black;
-                background: $white;
+                color: $white;
+                background: $black;
             }
 
             &.btn {
