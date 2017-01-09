@@ -4,7 +4,7 @@
     function loaded() {
         var fullsize = [$('.home'), $('.portfolio')];
 
-        var client = {
+        var small = {
             center: true,
             dots: false,
             loop: true,
@@ -32,7 +32,7 @@
             },
             stagePadding: 30
         };
-        var portfolio = {
+        var large = {
             animateIn: "fadeIn",
             animateOut: "zoomOut",
             center: true,
@@ -55,8 +55,9 @@
         navAnimate();
         $(window).scroll(navAnimate);
 
-        $('#owl-clients').owlCarousel(client);
-        $('#owl-portfolio').owlCarousel(portfolio);
+        $('#owl-clients').owlCarousel(small);
+        $('#owl-portfolio').owlCarousel(large);
+        $('#owl-publications').owlCarousel(small);
 
         $('#form_reserve').on('shown.bs.modal', function () {
             ga('send', 'event', 'contact', 'opened');
