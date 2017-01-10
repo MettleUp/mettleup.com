@@ -94,11 +94,11 @@
 
     function adjustHeight(i, section) {
         if (section.length > 0) {
-            if (section.hasClass('full-height')) {
-                section.height($(window).height());
-            } else {
-                section.height($(window).height() * 0.85);
-            }
+            var height = $(window).height();
+
+            if (section.hasClass('full-height')) section.height(height);
+            else if (section.hasClass('portfolio')) section.height(650);
+            else section.height(height * 0.85);
         }
     }
 
