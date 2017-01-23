@@ -14,21 +14,11 @@
                 "<i class='fa fa-angle-right'></i>"
             ],
             responsive: {
-                0: {
-                    items: 2
-                },
-                480: {
-                    items: 3
-                },
-                768: {
-                    items: 4
-                },
-                1000: {
-                    items: 5
-                },
-                2000: {
-                    items: 7
-                }
+                0: {items: 2},
+                480: {items: 3},
+                768: {items: 4},
+                1000: {items: 5},
+                2000: {items: 7}
             },
             stagePadding: 30
         };
@@ -48,6 +38,16 @@
             smartSpeed: 450,
             touchDrag: false
         };
+        var publication = {
+            nav: false,
+            responsive: {
+                0: {items: 2},
+                480: {items: 3},
+                768: {items: 4},
+                1000: {items: 5},
+                2000: {items: 5}
+            }
+        };
 
         fullImages(fullsize);
         $(window).resize(fullImages.bind(null, fullsize));
@@ -57,7 +57,7 @@
 
         $('#owl-clients').owlCarousel(small);
         $('#owl-portfolio').owlCarousel(large);
-        $('#owl-publications').owlCarousel(small);
+        $('#owl-publications').owlCarousel(Object.assign(small, publication));
 
         $('#form_reserve').on('shown.bs.modal', function () {
             ga('send', 'event', 'contact', 'opened');
