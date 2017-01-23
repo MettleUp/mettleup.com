@@ -33,7 +33,7 @@
             stagePadding: 30
         };
         var large = {
-            animateIn: "fadeIn",
+            //animateIn: "fadeInLeft",
             animateOut: "zoomOut",
             center: true,
             dots: false,
