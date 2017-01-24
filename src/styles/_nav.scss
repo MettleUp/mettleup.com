@@ -40,6 +40,12 @@
                 border: 1px solid $black;
                 color: $black;
             }
+
+            &.spicy {
+                &:hover {
+                    color: $spicy-red !important;
+                }
+            }
         }
     }
 
