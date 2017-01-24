@@ -39,4 +39,15 @@
 			}
 		}
 	}
+
+	.rabbit-hole {
+		bottom: 3%;
+		position: absolute;
+		width: 100%;
+
+		.fa {
+			color: $white;
+			font-size: 40px;
+		}
+	}
 }
