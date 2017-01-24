@@ -61,11 +61,13 @@
 
             &:hover, &.btn:hover {
                 background: transparent;
-                font-weight: bold;
+                color: $middle-grey;
+                font-weight: 400;
             }
 
             &.btn:hover {
                 background: $white;
+                color: $black;
             }
 
             &.btn {
@@ -87,6 +89,20 @@
             li {
                 a {
                     color: $white;
+
+                    &:hover {
+                        color: $middle-grey;
+                    }
+
+                    &.btn:hover {
+                        background: $white;
+                        color: $black;
+                    }
+
+                    &.btn {
+                        border: 1px solid $white;
+                        color: $white;
+                    }
                 }
             }
         }
