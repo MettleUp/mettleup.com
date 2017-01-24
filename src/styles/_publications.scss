@@ -4,6 +4,12 @@
 	background: $light-grey;
 	padding: 30px 0;
 
+	p {
+		color: $dark-grey;
+		font-size: 20px;
+		font-weight: 100;
+	}
+
 	.featured {
 		color: $dark-grey;
 		font-size: 40px;
