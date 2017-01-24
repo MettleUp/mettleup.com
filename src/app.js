@@ -104,10 +104,12 @@
 
     function navAnimate() {
         var nav = $('.navbar');
+        var wobble = $('#wobble');
         var top = $(window).scrollTop();
 
         if( top >= (nav.height() * 4) ) {
             nav.removeClass('navbar-transparent');
+            wobble.removeClass('wobble');
         }
         else {
             nav.addClass('navbar-transparent');
